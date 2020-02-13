@@ -41,21 +41,42 @@ impl<T> Matrix<T> {
 }
 
 impl<T> Matrix<T> {
-    pub fn dot() {}
-    pub fn mul() {}
-    pub fn mul() {}
-    pub fn mul() {}
-    pub fn t() {}
+    pub fn dot(&self) -> Matrix<T>{
+
+    }
+    
+    pub fn mul() -> Matrix<T>{
+
+    }
+    
+    pub fn mul() -> Matrix<T>{
+
+    }
+    
+    pub fn mul() -> Matrix<T>{
+
+    }
+    
+    pub fn T(&self) -> Matrix<T> {
+
+    }
 }
 
 impl<T> Index for Matrix<T> {
-    type Output = Matrix;
+    type Output = Matrix<T>;
 
-    pub fn index(&self, i: usize) -> U {}
+    pub fn index(&self, i: (Option(usize), Option(usize))) -> Result<T, E> {
+        if i == (None, None) { return E; }
+        match i {
+            i.0 == None => { return OK(get_col(i.1.unwrap())); },
+            i.1 == None => { return OK(get_row(i.0.unwrap())); },
+            _   => { return OK(get_elem(i.0.unwrap(), i.1.unwrap())); }
+        }
+    }
 }
 
 impl<T> Add for Matrix<T> {
-    type Output = Matrix;
+    type Output = Matrix<T>;
 
     pub fn add(&self, b: Matrix) -> Matrix {}
 }

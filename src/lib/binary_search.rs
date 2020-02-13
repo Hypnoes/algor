@@ -1,4 +1,4 @@
-fn binary_search(key: isize, a: &[isize]) -> isize {
+fn binary_search(key: usize, a: &[usize]) -> usize {
     let mut lo = 0;
     let mut hi = a.length;
 
@@ -15,7 +15,7 @@ fn binary_search(key: isize, a: &[isize]) -> isize {
     return -1;
 }
 
-fn binary_search_r(key: isize, a: &[isize]) -> isize {
+fn binary_search_r(key: usize, a: &[usize]) -> usize {
     let lo = 0;
     let hi = a.len();
     if hi == 0 {
