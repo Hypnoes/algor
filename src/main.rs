@@ -1,8 +1,8 @@
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 
-use std::env::args;
 use std::convert::TryInto;
+use std::env::args;
 use std::fmt::Display;
 
 fn main() {
@@ -36,10 +36,11 @@ fn main() {
         for j in 0..m {
             let i_: usize = i.try_into().unwrap();
             let j_: usize = j.try_into().unwrap();
-            g[i_][j_] = v.iter()
-                       .map(|x| x[j_])
-                       .map(|x| if x == i { 1 } else { 0 })
-                       .sum::<i32>();
+            g[i_][j_] = v
+                .iter()
+                .map(|x| x[j_])
+                .map(|x| if x == i { 1 } else { 0 })
+                .sum::<i32>();
         }
     }
 
